@@ -1,5 +1,0 @@
-name = "mental-strain-records"
-type = "javascript"
-
-[env.production]
-node_version = "18.19.1"
