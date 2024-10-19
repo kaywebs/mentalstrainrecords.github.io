@@ -1,0 +1,39 @@
+<div *ngIf="album" class="album-detail-container">
+  <img [src]="album.image" [alt]="album.title" class="album-cover">
+  <div class="album-info">
+    <div class="streaming-buttons">
+      <a *ngIf="album.links.spotify" [href]="album.links.spotify" target="_blank">Spotify</a>
+      <a *ngIf="album.links.appleMusic" [href]="album.links.appleMusic" target="_blank">Apple Music</a>
+      <a *ngIf="album.links.youtube" [href]="album.links.youtube" target="_blank">YouTube</a>
+      <a *ngIf="album.links.bandcamp" [href]="album.links.bandcamp" target="_blank">Bandcamp</a>
+    </div>
+    <h1 class="album-title">{{ album.title }}</h1>
+    <p class="album-artist">{{ album.artist }}</p>
+    <p class="album-release-date">{{ album.releaseDate }}</p>
+    <p class="album-release-number">{{ album.releaseNumber }}</p>
+
+    <ul class="track-list">
+      <h3>Track List:</h3>
+      <li *ngFor="let track of album.tracks; let i = index">
+        <span class="track-number">{{ i + 1 }}.</span> <!-- Track number -->
+        <span class="track-name">{{ track.name }}</span>
+        <span class="timestamp">({{ track.duration }})</span>
+      </li>
+    </ul>
+    <div class="album-credits">
+      <h3>Album Credits:</h3>
+      <p class="album-credits">Produced: <span class="credit-name">{{ album.credits.producer }}</span></p>
+      <p class="album-credits">Mixed: <span class="credit-name">{{ album.credits.mixer }}</span></p>
+      <p class="album-credits">Mastered: <span class="credit-name">{{ album.credits.masteringEngineer }}</span></p>
+      <p class="album-credits">Artwork: <span class="credit-name">{{ album.credits.artist }}</span></p>
+    </div>
+    <button (click)="goBack()" class="back-link"><--Back</button> <!-- Updated Back link -->
+  </div>
+  <div class="album-description">
+    <h3>Description:</h3>
+    <p>{{ album.description }}</p>
+  </div>
+</div>
+<div *ngIf="!album">
+  <p>Album not found.</p>
+</div>

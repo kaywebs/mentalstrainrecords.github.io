@@ -1,0 +1,11 @@
+footer {
+    background-color: black;
+    color: #FFFFA3;
+    text-align: center;
+    width: 100%;
+    position: fixed; /* Ensure the footer is positioned relative to the main content */
+    bottom: 0; /* Stick to the bottom */
+    padding: 0.5rem 0; /* Reduce padding to make the footer height smaller */
+    height: auto; /* Ensure the height adjusts based on content */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
