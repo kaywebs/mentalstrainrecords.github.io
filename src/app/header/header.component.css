@@ -1,0 +1,35 @@
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the header spans the full width */
+    text-align: center;
+    z-index: 1000; /* Ensure the header stays on top */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+}
+header img {
+    height: 50px; /* Adjust the height as needed */
+    margin-left: 1rem; /* Add some margin to the left */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-left: 1rem; /* Add some margin to the left of the nav */
+}
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+nav ul li a {
+    color: #FFFFA3;
+    text-decoration: none;
+}/* You can add global styles to this file, and also import other style files */
